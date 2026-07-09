@@ -1807,14 +1807,14 @@ struct _anon62
 };
 
 int En01_PlyMtn_OffsetTbl[4];*/
-char en01_flipTree[19] = {
-    0, 1, 5, 6, 7, 2, 3, 4, 
-    8, 9, 10, 11, 15, 16, 17, 12, 
+const char en01_flipTree[19] = {
+    0, 1, 5, 6, 7, 2, 3, 4,
+    8, 9, 10, 11, 15, 16, 17, 12,
     13, 14, -1
 };
 
-char en01_flipTree2[11] = {
-    0, 1, 2, 3, 7, 8, 9, 4, 
+const char en01_flipTree2[11] = {
+    0, 1, 2, 3, 7, 8, 9, 4,
     5, 6, -1
 };
 /*_anon35 en01_mtn_tbl[26];
@@ -1824,23 +1824,9 @@ char en01_tree[8][8];
 _anon20 En01_WpnDamageTbl[22];
 _anon59 CombWepTbl[21];
 _anon61 CombJointTbl[18];*/
-int en01_hp_tbl[16][2] = {
-    { 60,  60  }, // 0
-    { 60,  60  }, // 1
-    { 60,  90  }, // 2
-    { 90,  90  }, // 3
-    { 90,  90  }, // 4
-    { 120, 120 }, // 5
-    { 120, 120 }, // 6
-    { 120, 120 }, // 7
-    { 20,  20  }, // 8
-    { 40,  40  }, // 9
-    { 40,  40  }, // 10
-    { 40,  40  }, // 11
-    { 40,  40  }, // 12
-    { 60,  60  }, // 13
-    { 60,  60  }, // 14
-    { 60,  60  }  // 15
+const int en01_hp_tbl[2][16] = {
+    {  60,  60,  60,  60,  60,  90,  90,  90,  90,  90, 120, 120, 120, 120, 120, 120 },
+    {  20,  20,  40,  40,  40,  40,  40,  40,  40,  40,  60,  60,  60,  60,  60,  60 }
 };
 /*_anon34 en01_fire_tbl[14];*/
 CPCL Ene01CapColTabA[17] = {
@@ -1863,18 +1849,18 @@ CPCL Ene01CapColTabA[17] = {
     { 0, 0, 0 }
 };
 CPCL Ene01CapColTabB[12] = {
-    { 9,   9,  18 }, // 0
-    { 0,  16,   0 }, // 1
-    { 9,   9,  18 }, // 2
-    { 0,  30,   0 }, // 3
-    { 10, 11,   6 }, // 4
-    { 11, 11,  11 }, // 5
-    { 0,   9,  -2 }, // 6
-    { 12, 13,   6 }, // 7
-    { 13, 14,   5 }, // 8
-    { 15, 16,   6 }, // 9
-    { 16, 17,   5 }, // 10
-    { 0,   0,   0 }  // 11
+    { 9,   9,  18 },
+    { 0,  16,   0 },
+    { 9,   9,  18 },
+    { 0,  30,   0 },
+    { 10, 11,   6 },
+    { 11, 11,  11 },
+    { 0,   9,  -2 },
+    { 12, 13,   6 },
+    { 13, 14,   5 },
+    { 15, 16,   6 },
+    { 16, 17,   5 },
+    { 0,   0,   0 }
 };
 EN01_PERSONAL_TYPE en01_PersonalType[27] = {
     { 30.0f, 70.0f,  0x38E3,   0,   0 },
@@ -1934,7 +1920,7 @@ char En01SdwTabB[3] = {
 _anon15 en01prt_blood_tbl[18];
 _anon8 chg_mtn_tbl[28];
 int kaidan_ang[4];*/
-static NJS_POINT2_XZ cl_mtn01_xz[60] = {
+NJS_POINT2_XZ cl_mtn01_xz[60] = {
     { 0.0f, -4.400000034365803e-05f },
     { 0.0f, 0.1556289941072464f },
     { 0.0f, 0.3850249946117401f },
@@ -1996,7 +1982,7 @@ static NJS_POINT2_XZ cl_mtn01_xz[60] = {
     { -0.028310999274253845f, 0.7686570286750793f },
     { 0.0f, 0.6780539751052856f },
 };
-static NJS_POINT2_XZ cl_mtn02_xz[60] = {
+NJS_POINT2_XZ cl_mtn02_xz[60] = {
     { 0.0f, 4.8000001697801054e-05f },
     { 0.0f, 0.0f },
     { -0.004050000105053186f, 0.00965800043195486f },
@@ -2058,7 +2044,7 @@ static NJS_POINT2_XZ cl_mtn02_xz[60] = {
     { -0.8841680288314819f, 1.8876370191574097f },
     { -0.8632699847221375f, 1.7554579973220825f },
 };
-static NJS_POINT2_XZ cl_mtn04_xz[50] = {
+NJS_POINT2_XZ cl_mtn04_xz[50] = {
     { 0.03789199888706207f, 6.000000212225132e-06f },
     { 0.08987899869680405f, -0.025939999148249626f },
     { 0.15123100578784943f, -0.004757000133395195f },
@@ -2110,7 +2096,7 @@ static NJS_POINT2_XZ cl_mtn04_xz[50] = {
     { 0.010804000310599804f, 0.9728440046310425f },
     { 0.00317199993878603f, 1.0005849599838257f },
 };
-static NJS_POINT2_XZ cl_mtn05_xz[50] = {
+NJS_POINT2_XZ cl_mtn05_xz[50] = {
     { -0.8369140028953552f, 1.5845190286636353f },
     { -0.805778980255127f, 1.3798019886016846f },
     { -0.7705439925193787f, 1.146293044090271f },
@@ -2162,7 +2148,7 @@ static NJS_POINT2_XZ cl_mtn05_xz[50] = {
     { -0.039535000920295715f, 1.5769970417022705f },
     { -0.010242000222206116f, 1.6360729932785034f },
 };
-static NJS_POINT2_XZ ch_mtn01_xz[60] = {
+NJS_POINT2_XZ ch_mtn01_xz[60] = {
     { 0.0f, 0.0f },
     { -0.042569998651742935f, 0.4142630100250244f },
     { -0.10437700152397156f, 0.841346025466919f },
@@ -2224,7 +2210,7 @@ static NJS_POINT2_XZ ch_mtn01_xz[60] = {
     { -0.5580570101737976f, 0.5779489874839783f },
     { -0.6203579902648926f, 0.4589119851589203f },
 };
-static NJS_POINT2_XZ ch_mtn02_xz[60] = {
+NJS_POINT2_XZ ch_mtn02_xz[60] = {
     { 0.0f, 0.0f },
     { 0.0858599990606308f, 0.1661130040884018f },
     { 0.1692499965429306f, 0.33233198523521423f },
@@ -2286,7 +2272,7 @@ static NJS_POINT2_XZ ch_mtn02_xz[60] = {
     { 0.8888350129127502f, 2.8507580757141113f },
     { 0.835436999797821f, 2.8384690284729004f },
 };
-static NJS_POINT2_XZ ch_mtn04_xz[50] = {
+NJS_POINT2_XZ ch_mtn04_xz[50] = {
     { -0.6724969744682312f, 0.34119200706481934f },
     { -0.7154639959335327f, 0.1488720029592514f },
     { -0.7530050277709961f, -0.11596699804067612f },
@@ -2338,7 +2324,7 @@ static NJS_POINT2_XZ ch_mtn04_xz[50] = {
     { -0.0017500000540167093f, -1.058068037033081f },
     { 0.012651000171899796f, -1.0777469873428345f },
 };
-static NJS_POINT2_XZ ch_mtn05_xz[50] = {
+NJS_POINT2_XZ ch_mtn05_xz[50] = {
     { 0.7681649923324585f, 2.825083017349243f },
     { 0.6886079907417297f, 2.738801956176758f },
     { 0.598721981048584f, 2.52880597114563f },
@@ -2390,7 +2376,7 @@ static NJS_POINT2_XZ ch_mtn05_xz[50] = {
     { -0.08599399775266647f, -0.025814000517129898f },
     { -0.08732400089502335f, -0.1270589977502823f },
 };
-static NJS_POINT2_XZ st_mtn01_xz[60] = {
+NJS_POINT2_XZ st_mtn01_xz[60] = {
     { -0.0016199999954551458f, 0.0777050033211708f },
     { -0.015484999865293503f, 0.18041600286960602f },
     { -0.040619999170303345f, 0.22854800522327423f },
@@ -2452,7 +2438,7 @@ static NJS_POINT2_XZ st_mtn01_xz[60] = {
     { -0.7761459946632385f, -0.7475169897079468f },
     { -0.7777150273323059f, -0.7681980133056641f },
 };
-static NJS_POINT2_XZ st_mtn02_xz[60] = {
+NJS_POINT2_XZ st_mtn02_xz[60] = {
     { 0.009479999542236328f, 0.5929129719734192f },
     { 0.016289999708533287f, 0.789726972579956f },
     { 0.02131599932909012f, 0.9918670058250427f },
@@ -2514,7 +2500,7 @@ static NJS_POINT2_XZ st_mtn02_xz[60] = {
     { 0.439426988363266f, 3.126051902770996f },
     { 0.4396289885044098f, 3.1098649501800537f },
 };
-static NJS_POINT2_XZ st_mtn04_xz[50] = {
+NJS_POINT2_XZ st_mtn04_xz[50] = {
     { -0.7760390043258667f, -0.7811400294303894f },
     { -0.7701169848442078f, -0.7874630093574524f },
     { -0.7623370289802551f, -0.785040020942688f },
@@ -2566,7 +2552,7 @@ static NJS_POINT2_XZ st_mtn04_xz[50] = {
     { -0.022391999140381813f, -1.9079949855804443f },
     { -0.0057830000296235085f, -1.9637739658355713f },
 };
-static NJS_POINT2_XZ st_mtn05_xz[50] = {
+NJS_POINT2_XZ st_mtn05_xz[50] = {
     { 0.43468600511550903f, 3.081378936767578f },
     { 0.4241729974746704f, 3.038517951965332f },
     { 0.4076699912548065f, 2.9792070388793945f },
@@ -2779,10 +2765,10 @@ BH_PWORK ene[0];
 float lcmat[16][0];
 _anon1 eff[0];*/
 
-void (* bhEne01_MoveTypeB[])(struct BH_PWORK *);
-void (* bhEne01_NageTypeB[])(struct BH_PWORK *);
-void (* bhEne01_DamageTypeB[])(struct BH_PWORK *);
-void (* bhEne01_DieTypeB[])(struct BH_PWORK *);
+void (* bhEne01_MoveTypeB[16])(struct BH_PWORK *);
+void (* bhEne01_NageTypeB[16])(struct BH_PWORK *);
+void (* bhEne01_DamageTypeB[16])(struct BH_PWORK *);
+void (* bhEne01_DieTypeB[16])(struct BH_PWORK *);
 
 // 100% matching!
 void bhEne01_DmgCheckTypeDmmy()
@@ -2933,7 +2919,7 @@ void bhEne01_Init(BH_PWORK* epw)
 			bhEne_SetCallFunc(bhEne01Leg, 0x21);
 			if (epw->mdlver == 5 || epw->mdlver == 6 || epw->mdlver == 22 || (unsigned int)(epw->mdlver - 35) < 4){
 				epp = bhEne01_SetLinkEnemy(epw, 11, 0x22);
-				epp->mdflg &= -2;
+				epp->mdflg &= ~1;
 				epp->lox = 0;
 				epp->loy = 2.1376f;
 				epp->loz = -0.4113f;
@@ -2987,7 +2973,7 @@ void bhEne01_Init(BH_PWORK* epw)
                 epp = bhEne01_SetLinkEnemy(epw, 0, 0x26);
                 
                 epp->lkwkp = 0; 
-                epp->flg &= -0x81; 
+                epp->flg &= ~0x80; 
                 bhEne_SetCallFunc(bhEne01Parent, 0x26);
             }
         }
@@ -3025,17 +3011,17 @@ void bhEne01_Init(BH_PWORK* epw)
     if (sys->gm_mode != 2) {
         epw->hp = en01_hp_tbl[0][rand() % 16];
     } else {
-        epw->hp = en01_hp_tbl[8][rand() % 16];
+        epw->hp = en01_hp_tbl[1][rand() % 16];
     }
     
     epw->hp += (epw->hp * en01_PersonalType[EXP0_I(0x4C)].add_hp) / 100;
 
     EXP0_I(0x40) |= 1;
     epw->flg |= 0x178;
-    epw->flg &= -3;
+    epw->flg &= ~2;
 
     if (epw->flg & 0x80) {
-        epw->flg &= -0x29;
+        epw->flg &= ~0x28;
         epw->flg |= 0x8000;
 
 
@@ -3089,12 +3075,12 @@ void bhEne01_Init(BH_PWORK* epw)
         }
 
         if (!(EXP0_I(0x3c) & 0x00ffffff)){
-            epw->mdflg &= -0x401;
+            epw->mdflg &= ~0x400;
             EXP0_I(0x3C) = 0xFFB2B2B2;
             npSetAllMatColor(epw->mlwP->objP, epw->mlwP->obj_num, EXP0_I(0x3C));
             epp = (BH_PWORK*)*(int*)((char*)epw->exp0 + 0x14);
             if (epp != NULL){
-                epp->mdflg &= -0x401;
+                epp->mdflg &= ~0x400;
                 npSetAllMatColor(epp->mlwP->objP, epp->mlwP->obj_num, EXP0_I(0x3C));
             }
         }
@@ -3111,7 +3097,7 @@ void bhEne01_Init(BH_PWORK* epw)
     epw->clp_jno[5] = 0xc;
     epw->clp_jno[6] = 0xf;
     epw->clp_jno[7] = 0x1;
-	epw->mdflg &= -0x21;
+	epw->mdflg &= ~0x20;
     epw->lok_jno = 0xa;
     epw->comb_flg |= 2;
 
@@ -3154,10 +3140,10 @@ BH_PWORK* bhEne01_SetLinkEnemy(BH_PWORK* epw, int lkono, short id)
 // 100% matching!
 void bhEne01_Move(BH_PWORK* epw)
 {
-	NJS_POINT3 pos; // sp+0x20
-	O_WORK* owk; // v0
+	NJS_POINT3 pos;
+	O_WORK* owk;
 
-	EXP0_I(0x40) &= 0xfffff7ff;
+	EXP0_I(0x40) &= ~0x800;
 	if(epw->type != 10){
 		owk = plp->mlwP->owP;
 
@@ -3186,9 +3172,9 @@ void bhEne01_Move(BH_PWORK* epw)
 // 100% matching!
 void bhEne01_Nage(BH_PWORK* epw)
 {
-	EXP0_I(0x40) &= 0xfffff7ff;
+	EXP0_I(0x40) &= ~0x800;
 	if (EXP0_I(0x44) & 0x80){
-		EXP0_I(0x44) &= 0xffffff7f;
+		EXP0_I(0x44) &= ~0x80;
 	}
 	if (EXP0_I(0x40) & 0x80000000){
 		bhEne01_NageTypeB[epw->type](epw);
@@ -3200,9 +3186,9 @@ void bhEne01_Nage(BH_PWORK* epw)
 // 100% matching!
 void bhEne01_Damage(BH_PWORK* epw)
 {
-	EXP0_I(0x40) &= 0xfffff7ff;
+	EXP0_I(0x40) &= ~0x800;
 	if (EXP0_I(0x44) & 0x80){
-		EXP0_I(0x44) &= 0xffffff7f;
+		EXP0_I(0x44) &= ~0x80;
 	}
 	if (EXP0_I(0x40) & 0x80000000){
 		bhEne01_DamageTypeB[epw->type](epw);
@@ -3216,9 +3202,9 @@ void bhEne01_Damage(BH_PWORK* epw)
 void bhEne01_Die(BH_PWORK* epw) {
     BH_PWORK* epp;
     
-    EXP0_I(0x40) &= 0xfffff7ff;
+    EXP0_I(0x40) &= ~0x800;
 	if (EXP0_I(0x44) & 0x80){
-		EXP0_I(0x44) &= 0xffffff7f;
+		EXP0_I(0x44) &= ~0x80;
 	}
 	if (EXP0_I(0x40) & 0x80000000){
         epp = (BH_PWORK*)(epw->lkwkp);
@@ -3228,7 +3214,7 @@ void bhEne01_Die(BH_PWORK* epw) {
             epp->mdflg |= 0x400;
             
             if ((*(int*)(epp->exp0 + 0x3c) & 0xffffff) > 0) {
-                *(int *)(epp->exp0 + 0x3c) += 0xfffefeff; 
+                *(int *)(epp->exp0 + 0x3c) += ~0x10100; 
             }
             
             npSetAllMatColor(
@@ -3254,8 +3240,8 @@ void bhEne01_PlayerControl(BH_PWORK* pl, BH_PWORK* epw)
 
 void bhEne01_SearchNeck(BH_PWORK* epw)
 {
-	NJS_CNK_OBJECT * obj;  // r2
-	struct BH_PWORK * epp; // r5
+	NJS_CNK_OBJECT * obj;
+	struct BH_PWORK * epp;
 
 	epp = (struct BH_PWORK *)epw->lkwkp;
 
@@ -4384,7 +4370,7 @@ void bhEne01_InitType00(BH_PWORK* epw)
     epw->mode2 = 0;
     epw->mode3 = 0;
     if (epw->flg & 0x80) {
-        epw->mtn_no = 0xCA;
+        epw->mtn_no = 202;
     } else {
         bhEne01_GetWalkMotion(epw);
         epw->mtn_no = 2;
@@ -4401,12 +4387,12 @@ void bhEne01_InitType02(BH_PWORK* epw)
     epw->mode3 = 0;
   	epw->hp /= 2;
 	if (epw->flg & 0x80) {
-		EXP0_I(0x40) &= 0xfffffff0;
-		epw->mtn_no = 0xcb;
-		epw->hp = *(int *)(epw->lkwkp + 0x41c);
+		EXP0_I(0x40) &= ~0xF;
+		epw->mtn_no = 203;
+		epw->hp = ((BH_PWORK*)epw->lkwkp)->hp;
 	}
 	else {
-		EXP0_I(0x40) &= 0xfffffff0;
+		EXP0_I(0x40) &= ~0xF;
 		EXP0_I(0x40) |= 1;
 		epw->mtn_no = 3;
 	}
@@ -4425,13 +4411,13 @@ void bhEne01_InitType06(BH_PWORK* epw)
 	}
 	epw->hp /= 2;
 	if (epw->flg & 0x80) {
-		EXP0_I(0x40) &= 0xfffffff0;
-		epw->mtn_no = 0xcb;
-		epw->hp = *(int *)(epw->lkwkp + 0x41c);
+		EXP0_I(0x40) &= ~0xF;
+		epw->mtn_no = 203;
+		epw->hp = ((BH_PWORK*)epw->lkwkp)->hp;
 	}
 	else {
 		bhEne01_GetWalkMotion(epw);
-		EXP0_I(0x40) &= 0xfffffff0;
+		EXP0_I(0x40) &= ~0xF;
 		EXP0_I(0x40) |= 1;
 		epw->mtn_no = 3;
 	}
@@ -4441,14 +4427,14 @@ void bhEne01_InitType06(BH_PWORK* epw)
 // 100% matching!
 void bhEne01_InitType10(BH_PWORK* epw)
 {
-	epw->flg &= 0xffffffdf;
+	epw->flg &= ~0x20;
 	epw->mode0 = 1;
     epw->mode1 = 0;
     epw->mode2 = 0;
     epw->mode3 = 0;
-	EXP0_I(0x40) &= 0xefffffff;
+	EXP0_I(0x40) &= ~0x10000000;
 	if (epw->flg & 0x80) {
-		epw->mtn_no = 0xca;
+		epw->mtn_no = 202;
 	}
 	else {
 		bhEne01_GetWalkMotion(epw);
@@ -4466,7 +4452,7 @@ void bhEne01_InitType11(BH_PWORK* epw)
     epw->mode3 = 0;
 	EXP0_I(0x44) |= 0x10;
 	if (epw->flg & 0x80) {
-		epw->mtn_no = 0xca;
+		epw->mtn_no = 202;
 	}
 	else {
 		bhEne01_GetWalkMotion(epw);
@@ -4484,7 +4470,7 @@ void bhEne01_InitType15(BH_PWORK* epw)
     epw->mode3 = 0;
 	EXP0_I(0x44) |= 0x10;
 	if (epw->flg & 0x80) {
-		epw->mtn_no = 0xd5;
+		epw->mtn_no = 213;
 		epw->mtn_add = 0;
 	}
 	else {
@@ -4492,7 +4478,7 @@ void bhEne01_InitType15(BH_PWORK* epw)
 		epw->mtn_no = 13;
 		epw->mtn_add = 0;
 		EXP0_I(0x40) |= 0x40000;
-		EXP0_I(0x40) &= 0xfffffff0;
+		EXP0_I(0x40) &= ~0xF;
 		EXP0_I(0x40) |= 1;
 	}
 }

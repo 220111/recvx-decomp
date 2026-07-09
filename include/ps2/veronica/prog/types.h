@@ -32,8 +32,9 @@
 #include <../../../recvx-decomp-cri/cri/mwlib/include/cri_adxt.h>
 
 typedef struct {
-    float x;
-    float z;
+	// total size: 0x8
+    float x; // offset 0x0, size 0x4
+    float z; // offset 0x4, size 0x4
 } NJS_POINT2_XZ;
 
 typedef struct O_WORK
